@@ -8,15 +8,14 @@ metadata:
     role: team2
 spec:
   containers:
-  - image: tomcat
-    name: tomcat
-    resources: {}
+  - image: nginx
+    name: app-team2
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-  resources:
-    requests:
-      memory: "64Mi"
-      cpu: "250m"
-    limits:
-      memory: "128Mi"
-      cpu: "500m"

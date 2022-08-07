@@ -8,15 +8,14 @@ metadata:
     role: team1
 spec:
   containers:
-  - image: nginx
-    name: nginx
-    resources: {}
+  - image: drupal
+    name: app-team1
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-  resources:
-    requests:
-      memory: "64Mi"
-      cpu: "250m"
-    limits:
-      memory: "128Mi"
-      cpu: "500m"

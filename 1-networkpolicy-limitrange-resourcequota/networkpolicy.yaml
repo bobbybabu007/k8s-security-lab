@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: network-policy-team1-db-allow
+  name: team1-db-allow
   namespace: pro-security
 spec:
   podSelector:
